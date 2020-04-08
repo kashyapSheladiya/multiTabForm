@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is mainly for learning purpose.
 
-Things you may want to cover:
+* This project has User Authentication, Log In, Sign Up functionality.
 
-* Ruby version
+* Multi tab form, user can update his/her multitab form in future when he/she is logged in.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
