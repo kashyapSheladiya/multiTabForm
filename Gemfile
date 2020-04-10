@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 
+#Paper clip gem for attachments in form
+gem "paperclip", "~> 6.0.0"
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
