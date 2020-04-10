@@ -35,6 +35,9 @@ gem 'devise-bootstrap-views', '~> 1.0'
 #Paper clip gem for attachments in form
 gem "paperclip", "~> 6.0.0"
 
+# Country select gem for giving options of all country name
+gem 'country_select', '~> 4.0' 
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
