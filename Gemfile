@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 # devise gem is used for authentication
 gem 'devise'
+gem 'devise-bootstrap-views', '~> 1.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
