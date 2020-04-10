@@ -10,7 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_08_164414) do
+ActiveRecord::Schema.define(version: 2020_04_10_225533) do
+
+  create_table "admissions", force: :cascade do |t|
+    t.string "name"
+    t.date "dob"
+    t.string "gender"
+    t.string "email"
+    t.string "country"
+    t.string "address"
+    t.string "dadname"
+    t.string "momname"
+    t.string "dadoccupation"
+    t.string "momoccupation"
+    t.float "secmarks"
+    t.float "highsecmarks"
+    t.string "media_1_file_name"
+    t.string "media_1_content_type"
+    t.integer "media_1_file_size"
+    t.datetime "media_1_updated_at"
+    t.string "media_2_file_name"
+    t.string "media_2_content_type"
+    t.integer "media_2_file_size"
+    t.datetime "media_2_updated_at"
+    t.string "media_3_file_name"
+    t.string "media_3_content_type"
+    t.integer "media_3_file_size"
+    t.datetime "media_3_updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

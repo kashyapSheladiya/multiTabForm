@@ -31,3 +31,21 @@
 
 en:
   hello: "Hello world"
+
+  form:
+    name: "Student's Name"
+    dob: "Date of Birth"
+    gender: "Gender"
+    email: "Email"
+    country: "Country"
+    address: "Address"
+    dadname: "Father's Name"
+    momname: "Mother's Name"
+    dadoccupation: "Father's Occupation"
+    momoccupation: "Mother's Occupation"
+    secmarks: "Secondary Marks"
+    highsecmarks: " High Secondary Marks"
+    media_1 : "Marksheet 1"
+    media_2 : "Marksheet 2"
+    media_3 : "Photo"
+    submit: "Create"
