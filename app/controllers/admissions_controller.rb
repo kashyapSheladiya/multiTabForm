@@ -13,6 +13,23 @@ class AdmissionsController < ApplicationController
     @admissions = Admission.all
   end
 
+  def edit
+    @admission = Admission.find(params[:id])
+  end
+
+  def update
+    @admission = Admission.find(params[:id])
+    if @admission.update(admission_params)
+      redirect_to @admission
+    else
+      render 'edit'
+    end
+  end
+
+  def show
+    @admission = Admission.find(params[:id])
+  end
+
   private
 
   def admission_params

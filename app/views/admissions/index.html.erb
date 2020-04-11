@@ -15,7 +15,8 @@
       <th scope="row"><%= admission.id %></th>
       <td><%= admission.name %></td>
       <td><%= admission.dob %></td>
-      <td>@mdo</td>
+      <td><button type="button" class="btn btn-dark"><%= link_to "Show", admission_path(admission) %></button></td>
+      <td><button type="button" class="btn btn-dark"><%= link_to "Edit", edit_admission_path(admission) %></button></td>
     </tr>
     <% end %>
   </tbody>

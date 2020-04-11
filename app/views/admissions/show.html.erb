@@ -1,0 +1,59 @@
+<h1>Show</h1>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <th scope="row">Name</th>
+      <td><%= @admission.name %></td>
+    </tr>
+    <tr>
+      <th scope="row">Date of Birth</th>
+      <td><%= @admission.dob %></td>
+    </tr>
+    <tr>
+      <th scope="row">Gender</th>
+      <td><%= @admission.gender %></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><%= @admission.email %></td>
+    </tr>
+    <tr>
+      <th scope="row">Country</th>
+      <td><%= @admission.country %></td>
+    </tr>
+    <tr>
+      <th scope="row">Address</th>
+      <td><%= @admission.address %></td>
+    </tr>
+    <tr>
+      <th scope="row">Father's Name</th>
+      <td><%= @admission.dadname %></td>
+    </tr>
+    <tr>
+      <th scope="row">Mother's Name</th>
+      <td><%= @admission.momname %></td>
+    </tr>
+    <tr>
+      <th scope="row">Father's Occupation</th>
+      <td><%= @admission.dadoccupation %></td>
+    </tr>
+    <tr>
+      <th scope="row">Mother's Occupation</th>
+      <td><%= @admission.momoccupation %></td>
+    </tr>
+    <tr>
+      <th scope="row">Secondary Marks</th>
+      <td><%= @admission.secmarks %></td>
+    </tr>
+    <tr>
+      <th scope="row">Higher Secondary Marks</th>
+      <td><%= @admission.highsecmarks %></td>
+    </tr>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-dark">
+<%= link_to "All Form", admissions_path %>
+</button>
+
