@@ -1,0 +1,29 @@
+<h1>All Admissions</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date Of Birth</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @admissions.each do |admission| %>
+    <tr>
+      <th scope="row"><%= admission.id %></th>
+      <td><%= admission.name %></td>
+      <td><%= admission.dob %></td>
+      <td>@mdo</td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<button type="button" class="btn btn-dark">
+<%= link_to "Form", new_admission_path %>
+</button>
+<button type="button" class="btn btn-dark">
+<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+</button>

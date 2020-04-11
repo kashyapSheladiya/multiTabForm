@@ -20,9 +20,9 @@
               <%= f.label :gender, t(:'form.gender').html_safe %>
           </div>
           <div class="col-xl-10">
-            <%= radio_button_tag(:gender, "Male") %>
+            <%= f.radio_button(:gender, "Male") %>
             <%= label_tag(:gender, "Male") %>
-            <%= radio_button_tag(:gender, "Female") %>
+            <%= f.radio_button(:gender, "Female") %>
             <%= label_tag(:gender, "Female") %>
           </div>
           <div class="control-label col-xl-2 col-form-label">
@@ -109,3 +109,6 @@
     <% end %>         
   </div>
 </div>
+<button type="button" class="btn btn-dark">
+<%= link_to "All Admission", admissions_path %>
+</button>
