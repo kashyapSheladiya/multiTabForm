@@ -1,0 +1,114 @@
+<h5 align="center">Admission Form </h5>
+<hr>
+<div class = "row">
+  <div class = "col-xl-12">
+      <%= form_for(@admission, :html => {class: "form-horizontal", role: "form", multipart: true}) do |f| %>
+      <div class = "form-group row">
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :name, t(:'form.name').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :name, class: "form-control", placeholder: "Student's Name", autofocus: true %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :dob, t(:'form.dob').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.date_select :dob, start_year: 1985, end_year: 2020, order: [:year, :month, :day], prompt: true, class: "form-control", autofocus: true %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :gender, t(:'form.gender').html_safe %>
+          </div>
+          <div class="col-xl-10">
+            <%= f.radio_button(:gender, "Male") %>
+            <%= label_tag(:gender, "Male") %>
+            <%= f.radio_button(:gender, "Female") %>
+            <%= label_tag(:gender, "Female") %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :email, t(:'form.email').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :email, class: "form-control", placeholder: "Email", autofocus: true %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :country, t(:'form.country').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.country_select :country, include_blank: "country" %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :address, t(:'form.address').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :address, class: "form-control", placeholder: "Address", autofocus: true %>
+          </div>
+
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :dadname, t(:'form.dadname').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :dadname, class: "form-control", placeholder: "Father's Name", autofocus: true %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :momname, t(:'form.momname').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :momname, class: "form-control", placeholder: "Mother's Name", autofocus: true %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :dadoccupation, t(:'form.dadoccupation').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :dadoccupation, class: "form-control", placeholder: "Father's Occupation", autofocus: true %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :momoccupation, t(:'form.momoccupation').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :momoccupation, class: "form-control", placeholder: "Mother's Occupation", autofocus: true %>
+          </div>
+
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :secmarks, t(:'form.secmarks').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :secmarks, class: "form-control", placeholder: "Secondary Education Marks", autofocus: true %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :highsecmarks, t(:'form.highsecmarks').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.text_field :highsecmarks, class: "form-control", placeholder: "Higher Secondary Education Marks", autofocus: true %>
+          </div>
+
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :media_1, t(:'form.media_1').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.file_field :media_1 %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :media_2, t(:'form.media_2').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.file_field :media_2 %>
+          </div>
+          <div class="control-label col-xl-2 col-form-label">
+              <%= f.label :media_3, t(:'form.media_3').html_safe %>
+          </div>
+          <div class="col-xl-10">
+              <%= f.file_field :media_3 %>
+          </div>
+          <div class="form-group">
+            <div class="col-xl-2" >
+              <%= f.submit class: 'btn btn-primary btn-lg' %>
+            </div>
+          </div>
+      </div>
+    <% end %>         
+  </div>
+</div>
+<button type="button" class="btn btn-dark">
+<%= link_to "All Admission", admissions_path %>
+</button>
