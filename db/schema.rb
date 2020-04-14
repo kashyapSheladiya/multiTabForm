@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_10_225533) do
+ActiveRecord::Schema.define(version: 2020_04_14_134448) do
 
   create_table "admissions", force: :cascade do |t|
     t.string "name"
@@ -37,6 +37,27 @@ ActiveRecord::Schema.define(version: 2020_04_10_225533) do
     t.string "media_3_content_type"
     t.integer "media_3_file_size"
     t.datetime "media_3_updated_at"
+    t.integer "user_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "shipping_name"
+    t.integer "billing_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "registrations", force: :cascade do |t|
+    t.string "country"
+    t.string "address"
+    t.string "name"
+    t.date "dob"
+    t.text "bio"
+    t.string "fb"
+    t.string "twitter"
+    t.string "Insta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
