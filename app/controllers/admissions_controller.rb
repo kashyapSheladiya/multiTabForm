@@ -1,16 +1,18 @@
 class AdmissionsController < ApplicationController
+  before_action :authenticate_user!
   def new
     @admission = Admission.new
   end
 
   def create
     @admission = Admission.new(admission_params)
+    @admission.user = current_user
     @admission.save if @admission.valid?
-    redirect_to new_admission_path
+    redirect_to root_path
   end
 
   def index
-    @admissions = Admission.all
+    @admissions = Admission.where(user_id: current_user)
   end
 
   def edit

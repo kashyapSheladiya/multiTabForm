@@ -1,3 +1,27 @@
+<% if @admission.errors.any? %>
+    <div class="row">
+        <div class="col-xl-8 offset-xl-2">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <h2 class="panel-title">
+                        <%= pluralize(@admission.errors.count, "error") %>
+                        prohibited this article from being saved:
+                    </h2>
+                    <div class="panel-body">
+                        <ul>
+                            <% @admission.errors.full_messages.each do |msg| %>
+                                <li><%= msg %></li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+
+
 <h5 align="center">Admission Form </h5>
 <hr>
 <div class = "row">
@@ -112,3 +136,8 @@
 <button type="button" class="btn btn-dark">
 <%= link_to "All Admission", admissions_path %>
 </button>
+<? if user_signed_in? ?>
+    <button type="button" class="btn btn-dark">
+        <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+    </button>
+<? end ?>
